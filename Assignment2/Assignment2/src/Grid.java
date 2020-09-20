@@ -15,7 +15,7 @@ public class Grid {
 	 */
    public Grid() {
       
-      // TODO: Initialise the board array using ROWS and COLUMNS
+      board = new Box[ROWS][COLUMNS];
       
       for (int row = 0; row < ROWS; ++row) {
          for (int col = 0; col < COLUMNS; ++col) {
@@ -62,7 +62,7 @@ public class Grid {
 	   // Diagonal check (check both directions)
 	   if(board[0][0].content == player && board[1][1].content == player && board[2][2].content == player) {
 		   return true;
-	   }else if(board[3][0].content == player && board[1][1].content == player && board[0][3].content == player) {
+	   }else if(board[2][0].content == player && board[1][1].content == player && board[0][2].content == player) {
 		   return true;
 	   }	   
 	   // No one has won yet

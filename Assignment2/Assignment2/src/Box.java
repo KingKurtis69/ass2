@@ -13,19 +13,20 @@ public class Box {
     */
 	public Box(int row, int col) {
 	   
-		// TODO: Initialise the variables row, col, and content
+		
 		Box.row = row;
 		Box.col = col;
 		content = Player.EMPTY;
+		clear();
 		
 	}
  
    /**
     * Clear the box content to EMPTY
     */
-   public static void clear() {
-	   grid.board[row][col].content = Player.EMPTY;
-      // TODO: Set the value of content to EMPTY (Remember this is an enum)
+   public void clear() {
+	   content = Player.EMPTY;
+      
 	   
    }
  

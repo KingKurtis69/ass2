@@ -97,7 +97,7 @@ public class GameMain {
         	 validInput = true;
          } else {
         	 System.out.println("Sorry the input that was entered was either incorrect"
-        	 		+ "or the space is already taken. Please try again");
+        	 		+ " or the space is already taken. Please try again");
         	 // TODO: Display an error message that the move was not valid.
          }
          
@@ -130,15 +130,6 @@ public class GameMain {
 		   boolean validInput = checkValidInput(userInput, yesAnswerPool, noAnswerPool);
 		   if (validInput == true) {
 			   playAgain = checkPlayAgain(userInput, yesAnswerPool);
-		   }
-		   
-		   if(playAgain == true) {
-			   for(int row = 0; row < grid.ROWS; row++) {
-				   for(int col = 0; col < grid.COLUMNS; col++) {
-					   Box.clear();
-				   }
-				   
-			   }
 		   }
 		   
 	   }while(playAgain);
